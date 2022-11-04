@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+body {
+   font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    padding-bottom: 15px;
+}
+
+.wrapper {
+    margin: 0.5rem 1rem;
+    padding-top: 20px;
+}
+
+.main-img {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-img:hover .image-overlay {
+    display: block;
+}
+
+.main-img img {
+    width: 100%;
+    position: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+}
+.image-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 40%;
+    top: 40%;
+}
+
+.card-text {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.text-lead {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.eth-value {
+    flex-direction: row;
+}
+
+.eth-value, .days-value {
+    display: flex;
+}
+
+.eth-value p {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.days-value p {
+    padding-left: 10px;
+}
+
+hr {
+    border-color: hsl(215, 32%, 27%);
+}
+
+.author {
+    width: 10%;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+}
+
+.attribution a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: hsl(215, 51%, 70%);;
+}
+
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+}
