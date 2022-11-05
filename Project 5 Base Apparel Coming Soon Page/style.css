@@ -160,10 +160,6 @@ color: hsl(0, 71%, 62%);
   grid-template-columns: 1fr 1fr;
   position: relative;
 }
-
-.sub-container {
-
-}
   .head-brand {
     position: absolute;
     background: transparent;
