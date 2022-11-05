@@ -149,6 +149,7 @@ color: hsl(0, 71%, 62%);
 @media (min-width: 800px) {
   body {
     height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
   }
 
