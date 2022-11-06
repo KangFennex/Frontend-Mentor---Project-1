@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%)
+}
+
+.container {
+    max-width: 350px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.main-img {
+    position: relative;
+}
+
+.image-lead img {
+    width: 100%;
+}
+
+.main-content {
+    background-color: hsl(225, 100%, 98%);
+    text-align: center;
+    padding-top: 30px
+}
+
+.lead-text {
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.main-text {
+    margin: 15px 25px 20px 50px;
+    color: hsl(224, 23%, 55%)
+}
+
+.subscription {
+    display: flex;
+    align-items: center;
+    background-color: hsl(226, 48%, 95%);
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    padding: 0 1em;
+}
+
+.sub-price-container {
+    margin: 0 1rem;
+}
+
+.subscription h1 {
+font-size: 0.9em;
+font-weight: 900;
+margin-top: 1.2em;
+margin-bottom: 0;
+margin-right: 4em;
+}
+
+.subscription h2 {
+color: hsl(224, 23%, 55%);
+font-size: 0.9rem;
+text-align: left;
+margin-top: 0.2em;
+}
+
+.subscription a {
+    font-size: 0.9em;
+}
+
+.order-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.change {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.proceed-btn {
+    background: hsl(245, 75%, 52%);
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    height: 3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 0.5em hsl(245, 75%, 52%);;
+}
+
+.cancel {
+    color: hsl(224, 23%, 55%);
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.attribution {
+    margin-top: 25px;
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    
+}
+
+.attribution a {
+    color: hsl(224, 23%, 55%);
+    margin-left: 5px;
+}
+
+.github-icon {
+    padding-top: 10px;
+    margin-left: 0;
+}
+
