@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  height: 625px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 10px 10px 50px hsla(212, 23%, 69%, 0.4);
+  transition: 1s ease;
+}
+
+container:hover {
+  transform: scale(1.05);
+}
+
+.img-lead {
+  width: 100%;
+  display: flex;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: hsl(217, 19%, 35%);
+  margin: 5%;
+  padding-top: 15px;
+}
+
+p {
+  font-size: 1em;
+  color: hsl(217, 19%, 35%);
+  margin: 5%;
+  font-weight: 500;
+}
+
+.social {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.social--container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  width: 2.5em;
+  border-radius: 50%;
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+
+.name-date {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.date {
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: grey;
+}
+
+.share-button {
+  background-color: hsl(210, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  margin-right: 2.5em;
+  position: absolute;
+  right: -5px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.share-button.active {
+  background-color: hsl(212, 23%, 69%);
+}
+
+.share-button:hover {
+  background-color: hsl(212, 23%, 69%);
+}
+
+.share--container {
+  width: 100%;
+  height: 100%;
+}
+
+.share--popup {
+  width: 100%;
+  height: 21%;
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 5px;
+  font-size: 0.6em;
+  font-weight: 100;
+  margin-top: 10px;
+  transition-delay: 0.07s;
+}
+
+.hidden {
+  display: none;
+}
+
+.share-text {
+  margin-left: -1.8em;
+  margin-bottom: -0.em;
+}
+
+.share-icons {
+  margin-left: -8em;
+  margin-top: 0.3em;
+}
+
+.share-icon {
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+}
+
+.attribution {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+a {
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 850px) {
+
+
+  .container {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 20px;
+    overflow: visible;
+    position: relative;
+  }
+
+  .img-lead {
+   height: 300px;
+   border-radius: 10px 0 0 10px;
+  }
+
+  .text-container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 45%;
+    margin-left: 15px;
+    
+  }
+
+  h1 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: -1%
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 3%
+  }
+
+    .social {
+    width: 42%;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    margin-left: 15px;
+  }
+
+  .share-button {
+    position: absolute;
+    top: 120px;
+    right: -50px;
+  }
+  .share--popup {
+    box-shadow: 10px 10px 50px hsla(212, 23%, 69%, 0.4);
+    border-radius: 5px;
+    width: 23%;
+    height: 13%;
+    display: flex;
+    font-size: 0.4em;
+    position: absolute;
+    left: 630px;
+    bottom: 90px;
+  }
+
+  .share-text {
+    position: absolute;
+    left: 40px;
+    bottom: 2px
+  }
+
+  .share-icons {
+    width: 50%;
+    position: absolute;
+    display: inline;
+    left: 143px;
+    bottom: 5px
+  }
+
+  .popup-pointer {
+    background-color: hsl(217, 19%, 35%);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    transform: rotate(135deg);
+  }
+
+}
