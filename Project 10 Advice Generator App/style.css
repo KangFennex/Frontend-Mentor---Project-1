@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --card-width: 350px;
+    --card-height: 350px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: hsl(218, 23%, 16%);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    line-height: 2em
+}
+
+.card-component {
+    width: var(--card-width);
+    height: var(--card-height);
+    background: hsl(217, 19%, 24%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 150px auto;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* color animation taken from Gayane on Codepen: https://codepen.io/gayane-gasparyan/pen/jOmaBQK */
+
+.card-component::before {
+    content: "";
+    width: 357px;
+    height: 357px;
+    border-radius: 20px;
+    background: linear-gradient(
+        var(--rotate)
+        , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    top: -4px;
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+}
+
+.card-component::after {
+    position: absolute;
+    content: "";
+    top: 350px / 6;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate)
+        , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+/* End of Gayane's code */
+
+h1 {
+    color: hsl(150, 100%, 66%);
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    margin-top: 20px;
+}
+
+i {
+    color: #3c67e3;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.hidden {
+
+}
+
+/* Search box taken from Milan Milošev on Codepen: https://codepen.io/MilanMilosev/pen/JdgRpB */
+
+#content {
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    top: 94%;
+    left: 121%;
+    transform: translate(-50%, -50%)scale(0.6);
+  }
+  
+  #content.on {
+    -webkit-animation-name: in-out;
+    animation-name: in-out;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+  
+  input {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #3c67e3;
+    border-radius: 50%;
+    background: none;
+    color: #3c67e3;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Roboto;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+      padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+      padding 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+  }
+  
+  .search {
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 100%;
+    outline: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+  }
+  
+  .search:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: #3c67e3;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 26px;
+    margin-left: 17px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .close {
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+  }
+  
+  .close:before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    margin-top: -1px;
+    margin-left: -13px;
+    background-color: #3c67e3;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .close:after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    background-color: #3c67e3;
+    margin-top: -1px;
+    margin-left: -13px;
+    cursor: pointer;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .square {
+    box-sizing: border-box;
+    padding: 0 40px 0 10px;
+    width: 200px;
+    height: 50px;
+    border: 4px solid #3c67e3;
+    border-radius: 0;
+    background: none;
+    color: #3c67e3;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+      padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+      padding 0.2s;
+    -webkit-transition-delay: 0.4s, 0s, 0.4s;
+    transition-delay: 0.4s, 0s, 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+  }
+  
+/* End of Milan Milosev's search box */
+
+.green-separator {
+    width: 150px;
+    height: 1px;
+    background-color:  hsl(150, 100%, 66%);
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+p {
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.4em;
+    margin: 25px 40px;
+    text-align: center;
+    text-indent: 5%;
+}
+
+.pattern-divider-desktop {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: 25px;
+}
+
+.pattern-divider-mobile {
+    position: absolute;
+    bottom: 70px;
+    left: 25px;
+}
+
+.random-btn {
+    width: 4em;
+    height: 4em;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -25px;
+    left: 140px;
+    cursor: pointer;
+}
+
+.random-btn:hover {
+    box-shadow: 0 0 20px hsl(150, 100%, 66%);
+}
+
+.attribution {
+    font-size: 1em;
+    color: grey;
+}
+
+.attribution a {
+    color: grey;
+}
+
+@media screen and (min-width: 850px) {
+
+    #content {
+        transform: translate(-50%, -50%)scale(0.7);
+        top: 92%;
+        left: 113%;
+    }
+
+.square {
+    width: 300px;
+}
+    .card-component {
+        width: 600px;
+    }
+
+    .card-component::before {
+        content: "";
+        width: 607px;
+    }
+    
+
+    .pattern-divider-mobile {
+        display: none;
+    }
+
+    .pattern-divider-desktop {
+        display: block;
+        position: absolute;
+        left: 80px;
+    } 
+    .random-btn {
+        left: 270px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        font-size: 1em;
+    }
+
+    i {
+        top: 25px;
+        right: 30px;
+    }
+
+    p {
+        margin: 20px 60px;
+    }
+}
